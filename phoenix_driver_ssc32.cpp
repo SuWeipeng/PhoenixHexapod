@@ -284,7 +284,7 @@ void ServoDriver::FreeServos(void)
         SSCSerial.print(LegIndex, DEC);
         SSCSerial.print("P0");
     }
-    SSCSerial.print("T200\r\n");
+    SSCSerial.print("T200\r");
     g_InputController.AllowControllerInterrupts(true);    
 }
 
