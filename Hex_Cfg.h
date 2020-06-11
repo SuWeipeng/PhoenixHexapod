@@ -73,17 +73,17 @@
 //--------------------------------------------------------------------
 //[Botboarduino Pin Numbers]
 #ifdef __BOTBOARDUINO__
-  #define SOUND_PIN       3   // Botboarduino JR pin number
-  #define PS2_DAT         7        
-  #define PS2_CMD         6
-  #define PS2_SEL         1  // On the PS2 receiver this pin may be called ATT (attention)
-  #define PS2_CLK         5
+  #define SOUND_PIN       7   // Botboarduino JR pin number
+  #define PS2_DAT         10        
+  #define PS2_CMD         11
+  #define PS2_SEL         12  // On the PS2 receiver this pin may be called ATT (attention)
+  #define PS2_CLK         13
 // If we are using a SSC-32 then:
 // If were are running on an Arduino Mega we will use one of the hardware serial port, default to Serial1 above.
 // If on Non mega, if the IO pins are set to 0, we will overload the hardware Serial port 
 // Else we will user SoftwareSerial to talk to the SSC-32
-  #define cSSC_OUT       11   //Output pin for Botboard - Input of SSC32 (Yellow)
-  #define cSSC_IN        10   //Input pin for Botboard - Output of SSC32 (Blue)
+  #define cSSC_OUT       1   //Output pin for Botboard - Input of SSC32 (Yellow)
+  #define cSSC_IN        0   //Input pin for Botboard - Output of SSC32 (Blue)
 #endif
 
 #ifdef __BOTBOARD_ARDUINOPROMINI__
@@ -102,35 +102,35 @@
 
 //====================================================================
 //[SSC PIN NUMBERS]
-#define cRRCoxaPin      31   //Rear Right leg Hip Horizontal
-#define cRRFemurPin     30   //Rear Right leg Hip Vertical
-#define cRRTibiaPin     29   //Rear Right leg Knee
-#define cRRTarsPin      28   // Tar
+#define cRRCoxaPin      4   //Rear Right leg Hip Horizontal
+#define cRRFemurPin     3   //Rear Right leg Hip Vertical
+#define cRRTibiaPin     2   //Rear Right leg Knee
+#define cRRTarsPin      1   // Tar
 
-#define cRMCoxaPin      27   //Middle Right leg Hip Horizontal
-#define cRMFemurPin     26   //Middle Right leg Hip Vertical
-#define cRMTibiaPin     25   //Middle Right leg Knee
-#define cRMTarsPin      24   // Tar
+#define cRMCoxaPin      8   //Middle Right leg Hip Horizontal
+#define cRMFemurPin     7   //Middle Right leg Hip Vertical
+#define cRMTibiaPin     6   //Middle Right leg Knee
+#define cRMTarsPin      5   // Tar
 
-#define cRFCoxaPin      23   //Front Right leg Hip Horizontal
-#define cRFFemurPin     22   //Front Right leg Hip Vertical
-#define cRFTibiaPin     21   //Front Right leg Knee
-#define cRFTarsPin      20   // Tar
+#define cRFCoxaPin      12   //Front Right leg Hip Horizontal
+#define cRFFemurPin     11   //Front Right leg Hip Vertical
+#define cRFTibiaPin     10   //Front Right leg Knee
+#define cRFTarsPin      9   // Tar
 
-#define cLRCoxaPin      0   //Rear Left leg Hip Horizontal
-#define cLRFemurPin     1   //Rear Left leg Hip Vertical
-#define cLRTibiaPin     2   //Rear Left leg Knee
-#define cLRTarsPin      3   // Tar
+#define cLRCoxaPin      29   //Rear Left leg Hip Horizontal
+#define cLRFemurPin     30   //Rear Left leg Hip Vertical
+#define cLRTibiaPin     31   //Rear Left leg Knee
+#define cLRTarsPin      32   // Tar
 
-#define cLMCoxaPin      4   //Middle Left leg Hip Horizontal
-#define cLMFemurPin     5   //Middle Left leg Hip Vertical
-#define cLMTibiaPin     6   //Middle Left leg Knee
-#define cLMTarsPin      7   // Tar
+#define cLMCoxaPin      25   //Middle Left leg Hip Horizontal
+#define cLMFemurPin     26   //Middle Left leg Hip Vertical
+#define cLMTibiaPin     27   //Middle Left leg Knee
+#define cLMTarsPin      28   // Tar
 
-#define cLFCoxaPin      8   //Front Left leg Hip Horizontal
-#define cLFFemurPin     9   //Front Left leg Hip Vertical
-#define cLFTibiaPin     10   //Front Left leg Knee
-#define cLFTarsPin      11   // Tar
+#define cLFCoxaPin      21   //Front Left leg Hip Horizontal
+#define cLFFemurPin     22   //Front Left leg Hip Vertical
+#define cLFTibiaPin     23   //Front Left leg Knee
+#define cLFTarsPin      24   // Tar
 
 
 //--------------------------------------------------------------------
