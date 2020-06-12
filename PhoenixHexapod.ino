@@ -555,7 +555,7 @@ void StartUpdateServos()
 #ifdef c4DOF
         g_ServoDriver.OutputServoInfoForLeg(LegIndex, CoxaAngle1[LegIndex], FemurAngle1[LegIndex], TibiaAngle1[LegIndex], TarsAngle1[LegIndex]);
 #else
-        g_ServoDriver.OutputServoInfoForLeg(LegIndex, CoxaAngle1[LegIndex], -FemurAngle1[LegIndex], TibiaAngle1[LegIndex]);
+        g_ServoDriver.OutputServoInfoForLeg(LegIndex, CoxaAngle1[LegIndex], FemurAngle1[LegIndex], TibiaAngle1[LegIndex]);
 #endif      
     }
 }

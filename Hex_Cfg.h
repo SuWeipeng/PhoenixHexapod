@@ -42,12 +42,12 @@
 #define OPT_FIND_SERVO_OFFSETS    // Only useful if terminal monitor is enabled
 #endif
 
-#define OPT_GPPLAYER
+//#define OPT_GPPLAYER
 
 // Which type of control(s) do you want to compile in
 #define DBGSerial         Serial
 
-//#define UBRR1H
+#define UBRR1H
 #if defined(UBRR1H)
 #define SSCSerial         Serial1
 #else
@@ -102,35 +102,35 @@
 
 //====================================================================
 //[SSC PIN NUMBERS]
-#define cRRCoxaPin      31   //Rear Right leg Hip Horizontal
-#define cRRFemurPin     30   //Rear Right leg Hip Vertical
-#define cRRTibiaPin     29   //Rear Right leg Knee
-#define cRRTarsPin      28   // Tar
+#define cRRCoxaPin      23   //Rear Right leg Hip Horizontal
+#define cRRFemurPin     22   //Rear Right leg Hip Vertical
+#define cRRTibiaPin     21   //Rear Right leg Knee
+#define cRRTarsPin      20   // Tar
 
 #define cRMCoxaPin      27   //Middle Right leg Hip Horizontal
 #define cRMFemurPin     26   //Middle Right leg Hip Vertical
 #define cRMTibiaPin     25   //Middle Right leg Knee
 #define cRMTarsPin      24   // Tar
 
-#define cRFCoxaPin      23   //Front Right leg Hip Horizontal
-#define cRFFemurPin     22   //Front Right leg Hip Vertical
-#define cRFTibiaPin     21   //Front Right leg Knee
-#define cRFTarsPin      20   // Tar
+#define cRFCoxaPin      31   //Front Right leg Hip Horizontal
+#define cRFFemurPin     30   //Front Right leg Hip Vertical
+#define cRFTibiaPin     29   //Front Right leg Knee
+#define cRFTarsPin      28   // Tar
 
-#define cLRCoxaPin      0   //Rear Left leg Hip Horizontal
-#define cLRFemurPin     1   //Rear Left leg Hip Vertical
-#define cLRTibiaPin     2   //Rear Left leg Knee
-#define cLRTarsPin      3   // Tar
+#define cLRCoxaPin      8   //Rear Left leg Hip Horizontal
+#define cLRFemurPin     9   //Rear Left leg Hip Vertical
+#define cLRTibiaPin     10   //Rear Left leg Knee
+#define cLRTarsPin      11   // Tar
 
 #define cLMCoxaPin      4   //Middle Left leg Hip Horizontal
 #define cLMFemurPin     5   //Middle Left leg Hip Vertical
 #define cLMTibiaPin     6   //Middle Left leg Knee
 #define cLMTarsPin      7   // Tar
 
-#define cLFCoxaPin      8   //Front Left leg Hip Horizontal
-#define cLFFemurPin     9   //Front Left leg Hip Vertical
-#define cLFTibiaPin     10   //Front Left leg Knee
-#define cLFTarsPin      11   // Tar
+#define cLFCoxaPin      0   //Front Left leg Hip Horizontal
+#define cLFFemurPin     1   //Front Left leg Hip Vertical
+#define cLFTibiaPin     2   //Front Left leg Knee
+#define cLFTarsPin      3   // Tar
 
 
 //--------------------------------------------------------------------

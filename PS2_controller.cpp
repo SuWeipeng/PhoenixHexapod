@@ -307,11 +307,11 @@ void InputController::ControlInput(void)
   
                 //Walking
                 if (WalkMethod)  //(Walk Methode) 
-                    g_InControlState.TravelLength.z = (ps2x.Analog(PSS_RY)-128); //Right Stick Up/Down  
+                    g_InControlState.TravelLength.z = -(ps2x.Analog(PSS_RY)-128); //Right Stick Up/Down  
 
                 else {
                     g_InControlState.TravelLength.x = -(ps2x.Analog(PSS_LX) - 128);
-                    g_InControlState.TravelLength.z = (ps2x.Analog(PSS_LY) - 128);
+                    g_InControlState.TravelLength.z = -(ps2x.Analog(PSS_LY) - 128);
                 }
 
                 if (!DoubleTravelOn) {  //(Double travel length)
@@ -319,14 +319,14 @@ void InputController::ControlInput(void)
                     g_InControlState.TravelLength.z = g_InControlState.TravelLength.z/2;
                 }
 
-                g_InControlState.TravelLength.y = -(ps2x.Analog(PSS_RX) - 128)/4; //Right Stick Left/Right 
+                g_InControlState.TravelLength.y = (ps2x.Analog(PSS_RX) - 128)/4; //Right Stick Left/Right 
             }
 
             //[Translate functions]
             g_BodyYShift = 0;
             if (ControlMode == TRANSLATEMODE) {
                 g_InControlState.BodyPos.x = (ps2x.Analog(PSS_LX) - 128)/2;
-                g_InControlState.BodyPos.z = -(ps2x.Analog(PSS_LY) - 128)/3;
+                g_InControlState.BodyPos.z = (ps2x.Analog(PSS_LY) - 128)/3;
                 g_InControlState.BodyRot1.y = (ps2x.Analog(PSS_RX) - 128)*2;
                 g_BodyYShift = (-(ps2x.Analog(PSS_RY) - 128)/2);
             }
