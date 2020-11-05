@@ -135,7 +135,7 @@
 
 //--------------------------------------------------------------------
 //[MIN/MAX ANGLES]
-#define cRRCoxaMin1     -650      //Mechanical limits of the Right Rear Leg
+#define cRRCoxaMin1     -500      //Mechanical limits of the Right Rear Leg
 #define cRRCoxaMax1     650
 #define cRRFemurMin1    -1050
 #define cRRFemurMax1    750
@@ -144,8 +144,8 @@
 #define cRRTarsMin1     -1300	//4DOF ONLY - In theory the kinematics can reach about -160 deg
 #define cRRTarsMax1	500	//4DOF ONLY - The kinematics will never exceed 23 deg though..
 
-#define cRMCoxaMin1     -650      //Mechanical limits of the Right Middle Leg
-#define cRMCoxaMax1     650
+#define cRMCoxaMin1     -500      //Mechanical limits of the Right Middle Leg
+#define cRMCoxaMax1     500
 #define cRMFemurMin1    -1050
 #define cRMFemurMax1    750
 #define cRMTibiaMin1    -530
@@ -153,7 +153,7 @@
 #define cRMTarsMin1     -1300	//4DOF ONLY - In theory the kinematics can reach about -160 deg
 #define cRMTarsMax1	500	//4DOF ONLY - The kinematics will never exceed 23 deg though..
 
-#define cRFCoxaMin1     -650      //Mechanical limits of the Right Front Leg
+#define cRFCoxaMin1     -500      //Mechanical limits of the Right Front Leg
 #define cRFCoxaMax1     650
 #define cRFFemurMin1    -1050
 #define cRFFemurMax1    750
@@ -162,8 +162,8 @@
 #define cRFTarsMin1     -1300	//4DOF ONLY - In theory the kinematics can reach about -160 deg
 #define cRFTarsMax1	500	//4DOF ONLY - The kinematics will never exceed 23 deg though..
 
-#define cLRCoxaMin1     -650      //Mechanical limits of the Left Rear Leg
-#define cLRCoxaMax1     650
+#define cLRCoxaMin1     -500      //Mechanical limits of the Left Rear Leg
+#define cLRCoxaMax1     500
 #define cLRFemurMin1    -1050
 #define cLRFemurMax1    750
 #define cLRTibiaMin1    -530
@@ -171,8 +171,8 @@
 #define cLRTarsMin1     -1300	//4DOF ONLY - In theory the kinematics can reach about -160 deg
 #define cLRTarsMax1	500	//4DOF ONLY - The kinematics will never exceed 23 deg though..
 
-#define cLMCoxaMin1     -650      //Mechanical limits of the Left Middle Leg
-#define cLMCoxaMax1     650
+#define cLMCoxaMin1     -500      //Mechanical limits of the Left Middle Leg
+#define cLMCoxaMax1     500
 #define cLMFemurMin1    -1050
 #define cLMFemurMax1    750
 #define cLMTibiaMin1    -530
@@ -180,8 +180,8 @@
 #define cLMTarsMin1     -1300	//4DOF ONLY - In theory the kinematics can reach about -160 deg
 #define cLMTarsMax1	500	//4DOF ONLY - The kinematics will never exceed 23 deg though..
 
-#define cLFCoxaMin1     -650      //Mechanical limits of the Left Front Leg
-#define cLFCoxaMax1     650
+#define cLFCoxaMin1     -500      //Mechanical limits of the Left Front Leg
+#define cLFCoxaMax1     500
 #define cLFFemurMin1    -1050
 #define cLFFemurMax1    750
 #define cLFTibiaMin1    -530
@@ -192,9 +192,9 @@
 //--------------------------------------------------------------------
 //[LEG DIMENSIONS]
 //Universal dimensions for each leg in mm
-#define cXXCoxaLength     29    // This is for CH3-R with Type 3 legs
-#define cXXFemurLength    57
-#define cXXTibiaLength    141
+#define cXXCoxaLength     0    // This is for CH3-R with Type 3 legs
+#define cXXFemurLength    90
+#define cXXTibiaLength    120
 #define cXXTarsLength     85    // 4DOF only...
 
 #define cRRCoxaLength     cXXCoxaLength	    //Right Rear leg
@@ -237,19 +237,19 @@
 #define cLMCoxaAngle1    0      //Default Coxa setup angle, decimals = 1
 #define cLFCoxaAngle1    600      //Default Coxa setup angle, decimals = 1
 
-#define cRROffsetX      -69     //Distance X from center of the body to the Right Rear coxa
-#define cRROffsetZ      119     //Distance Z from center of the body to the Right Rear coxa
-#define cRMOffsetX      -138    //Distance X from center of the body to the Right Middle coxa
+#define cRROffsetX      -58     //Distance X from center of the body to the Right Rear coxa
+#define cRROffsetZ      110     //Distance Z from center of the body to the Right Rear coxa
+#define cRMOffsetX      -85    //Distance X from center of the body to the Right Middle coxa
 #define cRMOffsetZ      0       //Distance Z from center of the body to the Right Middle coxa
-#define cRFOffsetX      -69     //Distance X from center of the body to the Right Front coxa
-#define cRFOffsetZ      -119    //Distance Z from center of the body to the Right Front coxa
+#define cRFOffsetX      -58     //Distance X from center of the body to the Right Front coxa
+#define cRFOffsetZ      -110    //Distance Z from center of the body to the Right Front coxa
 
-#define cLROffsetX      69      //Distance X from center of the body to the Left Rear coxa
-#define cLROffsetZ      119     //Distance Z from center of the body to the Left Rear coxa
-#define cLMOffsetX      138     //Distance X from center of the body to the Left Middle coxa
+#define cLROffsetX      58      //Distance X from center of the body to the Left Rear coxa
+#define cLROffsetZ      110     //Distance Z from center of the body to the Left Rear coxa
+#define cLMOffsetX      85     //Distance X from center of the body to the Left Middle coxa
 #define cLMOffsetZ      0       //Distance Z from center of the body to the Left Middle coxa
-#define cLFOffsetX      69      //Distance X from center of the body to the Left Front coxa
-#define cLFOffsetZ      -119    //Distance Z from center of the body to the Left Front coxa
+#define cLFOffsetX      58      //Distance X from center of the body to the Left Front coxa
+#define cLFOffsetZ      -110    //Distance Z from center of the body to the Left Front coxa
 
 //--------------------------------------------------------------------
 //[START POSITIONS FEET]

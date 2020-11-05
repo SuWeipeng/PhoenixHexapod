@@ -69,6 +69,88 @@ static const word GetSin[] PROGMEM = {0, 87, 174, 261, 348, 436, 523, 610, 697, 
 //Build tables for Leg configuration like I/O and MIN/imax values to easy access values using a FOR loop
 //Constants are still defined as single values in the cfg file to make it easy to read/configure
 
+// BUGBUG: Need a cleaner way to define...
+// Lets allow for which legs servos to be inverted to be defined by the robot
+// This is used by the Lynxmotion Symetrical Quad.
+#ifndef cRRCoxaInv
+#define cRRCoxaInv 0 
+#endif
+#ifndef cRMCoxaInv 
+#define cRMCoxaInv 0 
+#endif
+#ifndef cRFCoxaInv 
+#define cRFCoxaInv 0 
+#endif
+
+#ifndef cLRCoxaInv 
+#define cLRCoxaInv 0 
+#endif
+#ifndef cLMCoxaInv 
+#define cLMCoxaInv 0 
+#endif
+#ifndef cLFCoxaInv 
+#define cLFCoxaInv 0 
+#endif
+
+#ifndef cRRFemurInv 
+#define cRRFemurInv 1 
+#endif
+#ifndef cRMFemurInv 
+#define cRMFemurInv 1 
+#endif
+#ifndef cRFFemurInv 
+#define cRFFemurInv 1 
+#endif
+
+#ifndef cLRFemurInv 
+#define cLRFemurInv 0 
+#endif
+#ifndef cLMFemurInv 
+#define cLMFemurInv 0 
+#endif
+#ifndef cLFFemurInv 
+#define cLFFemurInv 0 
+#endif
+
+#ifndef cRRTibiaInv 
+#define cRRTibiaInv 1 
+#endif
+#ifndef cRMTibiaInv 
+#define cRMTibiaInv 1 
+#endif
+#ifndef cRFTibiaInv 
+#define cRFTibiaInv 1 
+#endif
+
+#ifndef cLRTibiaInv 
+#define cLRTibiaInv 0 
+#endif
+#ifndef cLMTibiaInv 
+#define cLMTibiaInv 0 
+#endif
+#ifndef cLFTibiaInv 
+#define cLFTibiaInv 0 
+#endif
+
+#ifndef cRRTarsInv
+#define cRRTarsInv 1 
+#endif
+#ifndef cRMTarsInv 
+#define cRMTarsInv 1 
+#endif
+#ifndef cRFTarsInv 
+#define cRFTarsInv 1 
+#endif
+
+#ifndef cLRTarsInv 
+#define cLRTarsInv 0 
+#endif
+#ifndef cLMTarsInv 
+#define cLMTarsInv 0 
+#endif
+#ifndef cLFTarsInv 
+#define cLFTarsInv 0 
+#endif
 
 // Servo Horn offsets
 #ifdef cRRFemurHornOffset1   // per leg configuration
@@ -106,6 +188,14 @@ const short cTarsMin1[] PROGMEM = {cRRTarsMin1, cRMTarsMin1, cRFTarsMin1, cLRTar
 const short cTarsMax1[] PROGMEM = {cRRTarsMax1, cRMTarsMax1, cRFTarsMax1, cLRTarsMax1, cLMTarsMax1, cLFTarsMax1};
 #endif
 
+// Servo inverse direction
+const bool cCoxaInv[] = {cRRCoxaInv, cRMCoxaInv, cRFCoxaInv, cLRCoxaInv, cLMCoxaInv, cLFCoxaInv};
+bool cFemurInv[] = {cRRFemurInv, cRMFemurInv, cRFFemurInv, cLRFemurInv, cLMFemurInv, cLFFemurInv};
+const bool cTibiaInv[] = {cRRTibiaInv, cRMTibiaInv, cRFTibiaInv, cLRTibiaInv, cLMTibiaInv, cLFTibiaInv};
+
+#ifdef c4DOF
+const boolean cTarsInv[] = {cRRTarsInv, cRMTarsInv, cRFTarsInv, cLRTarsInv, cLMTarsInv, cLFTarsInv};
+#endif	
 
 //Leg Lengths
 const byte cCoxaLength[] PROGMEM = {cRRCoxaLength,  cRMCoxaLength,  cRFCoxaLength,  cLRCoxaLength,  cLMCoxaLength,  cLFCoxaLength};
@@ -553,9 +643,16 @@ void StartUpdateServos()
 
     for (LegIndex = 0; LegIndex <= 5; LegIndex++) {
 #ifdef c4DOF
-        g_ServoDriver.OutputServoInfoForLeg(LegIndex, CoxaAngle1[LegIndex], FemurAngle1[LegIndex], TibiaAngle1[LegIndex], TarsAngle1[LegIndex]);
+    g_ServoDriver.OutputServoInfoForLeg(LegIndex, 
+        cCoxaInv[LegIndex]? -CoxaAngle1[LegIndex] : CoxaAngle1[LegIndex], 
+        cFemurInv[LegIndex]? -FemurAngle1[LegIndex] : FemurAngle1[LegIndex], 
+        cTibiaInv[LegIndex]? -TibiaAngle1[LegIndex] : TibiaAngle1[LegIndex], 
+        cTarsInv[LegIndex]? -TarsAngle1[LegIndex] : TarsAngle1[LegIndex]);
 #else
-        g_ServoDriver.OutputServoInfoForLeg(LegIndex, CoxaAngle1[LegIndex], FemurAngle1[LegIndex], TibiaAngle1[LegIndex]);
+    g_ServoDriver.OutputServoInfoForLeg(LegIndex, 
+        cCoxaInv[LegIndex]? -CoxaAngle1[LegIndex] : CoxaAngle1[LegIndex], 
+        cFemurInv[LegIndex]? -FemurAngle1[LegIndex] : FemurAngle1[LegIndex], 
+        cTibiaInv[LegIndex]? -TibiaAngle1[LegIndex] : TibiaAngle1[LegIndex]);
 #endif      
     }
 }
