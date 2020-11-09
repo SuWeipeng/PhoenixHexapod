@@ -193,8 +193,8 @@
 //[LEG DIMENSIONS]
 //Universal dimensions for each leg in mm
 #define cXXCoxaLength     10    // This is for CH3-R with Type 3 legs
-#define cXXFemurLength    100
-#define cXXTibiaLength    80
+#define cXXFemurLength    60
+#define cXXTibiaLength    100
 #define cXXTarsLength     85    // 4DOF only...
 
 #define cRRCoxaLength     cXXCoxaLength	    //Right Rear leg
@@ -254,7 +254,7 @@
 //--------------------------------------------------------------------
 //[START POSITIONS FEET]
 #define cHexInitXZ	 80
-#define CHexInitXZCos60  40        // COS(60) = .5
+#define CHexInitXZCos60  60        // COS(60) = .5
 #define CHexInitXZSin60  69    // sin(60) = .866
 #define CHexInitY	80 //30
 
