@@ -137,8 +137,8 @@
 //[MIN/MAX ANGLES]
 #define cRRCoxaMin1     -150      //Mechanical limits of the Right Rear Leg
 #define cRRCoxaMax1     150
-#define cRRFemurMin1    -1050
-#define cRRFemurMax1    750
+#define cRRFemurMin1    -1500
+#define cRRFemurMax1    500
 #define cRRTibiaMin1    -800
 #define cRRTibiaMax1    1200
 #define cRRTarsMin1     -1300	//4DOF ONLY - In theory the kinematics can reach about -160 deg
@@ -146,8 +146,8 @@
 
 #define cRMCoxaMin1     -150      //Mechanical limits of the Right Middle Leg
 #define cRMCoxaMax1     150
-#define cRMFemurMin1    -1050
-#define cRMFemurMax1    750
+#define cRMFemurMin1    -1500
+#define cRMFemurMax1    500
 #define cRMTibiaMin1    -800
 #define cRMTibiaMax1    1200
 #define cRMTarsMin1     -1300	//4DOF ONLY - In theory the kinematics can reach about -160 deg
@@ -155,8 +155,8 @@
 
 #define cRFCoxaMin1     -150      //Mechanical limits of the Right Front Leg
 #define cRFCoxaMax1     150
-#define cRFFemurMin1    -1050
-#define cRFFemurMax1    750
+#define cRFFemurMin1    -1500
+#define cRFFemurMax1    500
 #define cRFTibiaMin1    -800
 #define cRFTibiaMax1    1200
 #define cRFTarsMin1     -1300	//4DOF ONLY - In theory the kinematics can reach about -160 deg
@@ -164,8 +164,8 @@
 
 #define cLRCoxaMin1     -150      //Mechanical limits of the Left Rear Leg
 #define cLRCoxaMax1     150
-#define cLRFemurMin1    -1050
-#define cLRFemurMax1    750
+#define cLRFemurMin1    -1500
+#define cLRFemurMax1    500
 #define cLRTibiaMin1    -800
 #define cLRTibiaMax1    1200
 #define cLRTarsMin1     -1300	//4DOF ONLY - In theory the kinematics can reach about -160 deg
@@ -173,8 +173,8 @@
 
 #define cLMCoxaMin1     -150      //Mechanical limits of the Left Middle Leg
 #define cLMCoxaMax1     150
-#define cLMFemurMin1    -1050
-#define cLMFemurMax1    750
+#define cLMFemurMin1    -1500
+#define cLMFemurMax1    500
 #define cLMTibiaMin1    -800
 #define cLMTibiaMax1    1200
 #define cLMTarsMin1     -1300	//4DOF ONLY - In theory the kinematics can reach about -160 deg
@@ -182,8 +182,8 @@
 
 #define cLFCoxaMin1     -150      //Mechanical limits of the Left Front Leg
 #define cLFCoxaMax1     150
-#define cLFFemurMin1    -1050
-#define cLFFemurMax1    750
+#define cLFFemurMin1    -1500
+#define cLFFemurMax1    500
 #define cLFTibiaMin1    -800
 #define cLFTibiaMax1    1200
 #define cLFTarsMin1     -1300	//4DOF ONLY - In theory the kinematics can reach about -160 deg
@@ -192,9 +192,9 @@
 //--------------------------------------------------------------------
 //[LEG DIMENSIONS]
 //Universal dimensions for each leg in mm
-#define cXXCoxaLength     0    // This is for CH3-R with Type 3 legs
-#define cXXFemurLength    90
-#define cXXTibiaLength    120
+#define cXXCoxaLength     10    // This is for CH3-R with Type 3 legs
+#define cXXFemurLength    100
+#define cXXTibiaLength    80
 #define cXXTarsLength     85    // 4DOF only...
 
 #define cRRCoxaLength     cXXCoxaLength	    //Right Rear leg
