@@ -8,3 +8,11 @@ The relevant files are usually located in your /Arduino/libraries/ folder.
 Most of the settings you can configure to customize your hexapod, its gait and communication are found [here](https://github.com/Lynxmotion/3DOF-4DOF-Hex/blob/master/BotBoarduino/3%20DoF%20Ready/BotBoarduino_CH3R_PS2/Hex_Cfg.h).
 
 The details concerning the controls are [here](https://github.com/Lynxmotion/3DOF-4DOF-Hex/blob/master/BotBoarduino/3%20DoF%20Ready/BotBoarduino_CH3R_PS2/PS2_controller.cpp).
+
+Phoenix 资料来源
+---
+[http://www.lynxmotion.com/images/html/proj098.htm](http://www.lynxmotion.com/images/html/proj098.htm)
+
+Phoenix github 链接
+---
+[https://github.com/KurtE/Phantom_Phoenix](https://github.com/KurtE/Phantom_Phoenix)
