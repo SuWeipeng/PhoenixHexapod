@@ -16,3 +16,8 @@ Phoenix 资料来源
 Phoenix github 链接
 ---
 [https://github.com/KurtE/Phantom_Phoenix](https://github.com/KurtE/Phantom_Phoenix)
+
+六足仿真
+---
+[https://github.com/mithi/hexapod](https://github.com/mithi/hexapod)           
+[https://github.com/mithi/hexapod-robot-simulator](https://github.com/mithi/hexapod-robot-simulator)
